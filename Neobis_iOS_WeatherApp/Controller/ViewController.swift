@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let weatherView = WeatherView(frame: UIScreen.main.bounds)
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        view.addSubview(weatherView)
     }
 
 
