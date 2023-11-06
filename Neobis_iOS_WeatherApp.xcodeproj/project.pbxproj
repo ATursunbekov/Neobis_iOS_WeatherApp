@@ -15,6 +15,13 @@
 		77C43E282AF37BA50089FB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C43E262AF37BA50089FB34 /* LaunchScreen.storyboard */; };
 		77C43E312AF381D40089FB34 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E302AF381D40089FB34 /* Extension+UIColor.swift */; };
 		77C43E362AF3834B0089FB34 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E352AF3834B0089FB34 /* WeatherView.swift */; };
+		77E556CD2AF4EAAF00D6957A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556C92AF4EAAF00D6957A /* Montserrat-Medium.ttf */; };
+		77E556CE2AF4EAAF00D6957A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556CA2AF4EAAF00D6957A /* Montserrat-Bold.ttf */; };
+		77E556CF2AF4EAAF00D6957A /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556CB2AF4EAAF00D6957A /* Montserrat-Light.ttf */; };
+		77E556D02AF4EAAF00D6957A /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556CC2AF4EAAF00D6957A /* Montserrat-Regular.ttf */; };
+		77F1B3E62AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1B3E52AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift */; };
+		77F1B3E92AF8F26000096C37 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1B3E82AF8F26000096C37 /* WeatherModel.swift */; };
+		77F1B3EB2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1B3EA2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		77C43E292AF37BA50089FB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C43E302AF381D40089FB34 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		77C43E352AF3834B0089FB34 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		77E556C92AF4EAAF00D6957A /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		77E556CA2AF4EAAF00D6957A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		77E556CB2AF4EAAF00D6957A /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		77E556CC2AF4EAAF00D6957A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		77F1B3E52AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		77F1B3E82AF8F26000096C37 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		77F1B3EA2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCustomTableViewCell.swift; sourceTree = "<group>"; };
 		DC9A142FF4B957B6E1A2710A /* Pods-Neobis_iOS_WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_WeatherApp/Pods-Neobis_iOS_WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E9672BF40A16C1FAF0DA00B9 /* Pods-Neobis_iOS_WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_WeatherApp/Pods-Neobis_iOS_WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +96,8 @@
 		77C43E1A2AF37BA40089FB34 /* Neobis_iOS_WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				77E556C82AF4EA8600D6957A /* Fonts */,
+				77F1B3E72AF8F24800096C37 /* Model */,
 				77C43E342AF382200089FB34 /* View */,
 				77C43E332AF382050089FB34 /* Controller */,
 				77C43E2F2AF381BC0089FB34 /* Extention */,
@@ -122,8 +138,29 @@
 			isa = PBXGroup;
 			children = (
 				77C43E352AF3834B0089FB34 /* WeatherView.swift */,
+				77F1B3E52AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift */,
+				77F1B3EA2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		77E556C82AF4EA8600D6957A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				77E556CA2AF4EAAF00D6957A /* Montserrat-Bold.ttf */,
+				77E556CB2AF4EAAF00D6957A /* Montserrat-Light.ttf */,
+				77E556C92AF4EAAF00D6957A /* Montserrat-Medium.ttf */,
+				77E556CC2AF4EAAF00D6957A /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		77F1B3E72AF8F24800096C37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77F1B3E82AF8F26000096C37 /* WeatherModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +223,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E556D02AF4EAAF00D6957A /* Montserrat-Regular.ttf in Resources */,
+				77E556CF2AF4EAAF00D6957A /* Montserrat-Light.ttf in Resources */,
+				77E556CE2AF4EAAF00D6957A /* Montserrat-Bold.ttf in Resources */,
 				77C43E282AF37BA50089FB34 /* LaunchScreen.storyboard in Resources */,
+				77E556CD2AF4EAAF00D6957A /* Montserrat-Medium.ttf in Resources */,
 				77C43E252AF37BA50089FB34 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +283,9 @@
 			files = (
 				77C43E362AF3834B0089FB34 /* WeatherView.swift in Sources */,
 				77C43E202AF37BA40089FB34 /* ViewController.swift in Sources */,
+				77F1B3EB2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift in Sources */,
+				77F1B3E62AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift in Sources */,
+				77F1B3E92AF8F26000096C37 /* WeatherModel.swift in Sources */,
 				77C43E1C2AF37BA40089FB34 /* AppDelegate.swift in Sources */,
 				77C43E1E2AF37BA40089FB34 /* SceneDelegate.swift in Sources */,
 				77C43E312AF381D40089FB34 /* Extension+UIColor.swift in Sources */,
