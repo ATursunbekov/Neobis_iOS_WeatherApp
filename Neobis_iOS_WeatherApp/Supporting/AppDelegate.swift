@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print("\n\(font_name)")
 //            }
 //        })
+        if let savedCities = UserDefaults.standard.data(forKey: "cities") {
+            let decoder = JSONDecoder()
+            if let cities = try? decoder.decode([String].self, from: savedCities) {
+                DataManager.shared.cities = cities
+            }
+        }
         return true
     }
 

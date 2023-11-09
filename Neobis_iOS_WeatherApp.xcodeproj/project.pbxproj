@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		58B115D97B2ACFF34F62C4B8 /* Pods_Neobis_iOS_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CC86914E9A7A5B590E733A /* Pods_Neobis_iOS_WeatherApp.framework */; };
+		772B8B072AFCEA2900180E6D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B8B062AFCEA2900180E6D /* CountryModel.swift */; };
+		772B8B092AFD00BD00180E6D /* WeekWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B8B082AFD00BC00180E6D /* WeekWeatherModel.swift */; };
+		772B8B0C2AFD701500180E6D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B8B0B2AFD701500180E6D /* DataManager.swift */; };
 		77C43E1C2AF37BA40089FB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E1B2AF37BA40089FB34 /* AppDelegate.swift */; };
 		77C43E1E2AF37BA40089FB34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E1D2AF37BA40089FB34 /* SceneDelegate.swift */; };
 		77C43E202AF37BA40089FB34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E1F2AF37BA40089FB34 /* ViewController.swift */; };
@@ -15,6 +18,7 @@
 		77C43E282AF37BA50089FB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C43E262AF37BA50089FB34 /* LaunchScreen.storyboard */; };
 		77C43E312AF381D40089FB34 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E302AF381D40089FB34 /* Extension+UIColor.swift */; };
 		77C43E362AF3834B0089FB34 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C43E352AF3834B0089FB34 /* WeatherView.swift */; };
+		77DF11142AFC036800223278 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DF11132AFC036800223278 /* WeatherService.swift */; };
 		77E556CD2AF4EAAF00D6957A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556C92AF4EAAF00D6957A /* Montserrat-Medium.ttf */; };
 		77E556CE2AF4EAAF00D6957A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556CA2AF4EAAF00D6957A /* Montserrat-Bold.ttf */; };
 		77E556CF2AF4EAAF00D6957A /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77E556CB2AF4EAAF00D6957A /* Montserrat-Light.ttf */; };
@@ -26,6 +30,9 @@
 
 /* Begin PBXFileReference section */
 		10CC86914E9A7A5B590E733A /* Pods_Neobis_iOS_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		772B8B062AFCEA2900180E6D /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		772B8B082AFD00BC00180E6D /* WeekWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWeatherModel.swift; sourceTree = "<group>"; };
+		772B8B0B2AFD701500180E6D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		77C43E182AF37BA40089FB34 /* Neobis_iOS_WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C43E1B2AF37BA40089FB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77C43E1D2AF37BA40089FB34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +42,7 @@
 		77C43E292AF37BA50089FB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C43E302AF381D40089FB34 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		77C43E352AF3834B0089FB34 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		77DF11132AFC036800223278 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		77E556C92AF4EAAF00D6957A /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		77E556CA2AF4EAAF00D6957A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		77E556CB2AF4EAAF00D6957A /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -75,6 +83,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		772B8B0A2AFD700800180E6D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				772B8B0B2AFD701500180E6D /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		77C43E0F2AF37BA40089FB34 = {
 			isa = PBXGroup;
 			children = (
@@ -96,10 +112,12 @@
 		77C43E1A2AF37BA40089FB34 /* Neobis_iOS_WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				772B8B0A2AFD700800180E6D /* Manager */,
 				77E556C82AF4EA8600D6957A /* Fonts */,
 				77F1B3E72AF8F24800096C37 /* Model */,
 				77C43E342AF382200089FB34 /* View */,
-				77C43E332AF382050089FB34 /* Controller */,
+				77C43E332AF382050089FB34 /* ViewController */,
+				77DF11122AFC032700223278 /* Services */,
 				77C43E2F2AF381BC0089FB34 /* Extention */,
 				77C43E322AF381E00089FB34 /* Supporting */,
 				77C43E242AF37BA50089FB34 /* Assets.xcassets */,
@@ -126,22 +144,38 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		77C43E332AF382050089FB34 /* Controller */ = {
+		77C43E332AF382050089FB34 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				77C43E1F2AF37BA40089FB34 /* ViewController.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		77C43E342AF382200089FB34 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77DF11112AFBF18300223278 /* CustomCells */,
 				77C43E352AF3834B0089FB34 /* WeatherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77DF11112AFBF18300223278 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
 				77F1B3E52AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift */,
 				77F1B3EA2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift */,
 			);
-			path = View;
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		77DF11122AFC032700223278 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				77DF11132AFC036800223278 /* WeatherService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		77E556C82AF4EA8600D6957A /* Fonts */ = {
@@ -159,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				77F1B3E82AF8F26000096C37 /* WeatherModel.swift */,
+				772B8B062AFCEA2900180E6D /* CountryModel.swift */,
+				772B8B082AFD00BC00180E6D /* WeekWeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,8 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C43E362AF3834B0089FB34 /* WeatherView.swift in Sources */,
+				772B8B0C2AFD701500180E6D /* DataManager.swift in Sources */,
+				77DF11142AFC036800223278 /* WeatherService.swift in Sources */,
 				77C43E202AF37BA40089FB34 /* ViewController.swift in Sources */,
 				77F1B3EB2AF92B6D00096C37 /* WeatherCustomTableViewCell.swift in Sources */,
+				772B8B092AFD00BD00180E6D /* WeekWeatherModel.swift in Sources */,
+				772B8B072AFCEA2900180E6D /* CountryModel.swift in Sources */,
 				77F1B3E62AF8ED3F00096C37 /* WeatherCustomCollectionViewCell.swift in Sources */,
 				77F1B3E92AF8F26000096C37 /* WeatherModel.swift in Sources */,
 				77C43E1C2AF37BA40089FB34 /* AppDelegate.swift in Sources */,

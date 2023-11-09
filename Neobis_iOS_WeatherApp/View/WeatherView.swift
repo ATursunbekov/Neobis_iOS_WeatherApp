@@ -10,17 +10,6 @@ import UIKit
 import SnapKit
 
 class WeatherView: UIView {
-    
-    let weekWeather = [
-        WeatherModel(weekDay: "Sunday", image: "snow", temp: "10° C"),
-        WeatherModel(weekDay: "Monday", image: "rainySun", temp: "8° C"),
-        WeatherModel(weekDay: "Tuesday", image: "hail", temp: "3° C"),
-        WeatherModel(weekDay: "Wednesday", image: "lightning", temp: "5° C"),
-        WeatherModel(weekDay: "Thursday", image: "cloud", temp: "9° C")
-    ]
-    
-    let cities:[String] = ["London"]
-    
     lazy var searchButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "magnifyingglass"), for: .normal)
@@ -30,7 +19,7 @@ class WeatherView: UIView {
     
     lazy var dateText: UILabel = {
         let label = UILabel()
-        label.text = "Today, May 7th, 2021"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Regular", size: 14)
         label.textColor = .white
         return label
@@ -38,7 +27,7 @@ class WeatherView: UIView {
     
     lazy var cityName: UILabel = {
         let label = UILabel()
-        label.text = "Barcelona"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Bold", size: 40)
         label.textColor = .white
         return label
@@ -46,7 +35,7 @@ class WeatherView: UIView {
     
     lazy var countryName: UILabel = {
         let label = UILabel()
-        label.text = "Spain"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Regular", size: 20)
         label.textColor = .white
         return label
@@ -64,15 +53,15 @@ class WeatherView: UIView {
     }()
     
     lazy var weatherImage: UIImageView = {
-        let image = UIImageView(image: UIImage(named: "rain"))
+        let image = UIImageView()
         image.contentMode = .scaleAspectFit
         return image
     }()
     
     lazy var tempretureText: UILabel = {
         let label = UILabel()
-        label.text = "10°C"
-        label.font = UIFont(name: "Montserrat-Light", size: 100)
+        label.text = ""
+        label.font = UIFont(name: "Montserrat-Light", size: 90)
         return label
     }()
     
@@ -89,7 +78,7 @@ class WeatherView: UIView {
     
     lazy var windStatusData: UILabel = {
         let label = UILabel()
-        label.text = "7 mph"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Regular", size: 20)
         label.textColor = .white
         return label
@@ -105,7 +94,7 @@ class WeatherView: UIView {
     
     lazy var humidityData: UILabel = {
         let label = UILabel()
-        label.text = "85%"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Regular", size: 20)
         label.textColor = .white
         return label
@@ -121,7 +110,7 @@ class WeatherView: UIView {
     
     lazy var visibilityData: UILabel = {
         let label = UILabel()
-        label.text = "6.4 miles"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Regular", size: 20)
         label.textColor = .white
         return label
@@ -137,7 +126,7 @@ class WeatherView: UIView {
     
     lazy var airPressureData: UILabel = {
         let label = UILabel()
-        label.text = "998 mb"
+        label.text = ""
         label.font = UIFont(name: "Montserrat-Regular", size: 20)
         label.textColor = .white
         return label
@@ -165,8 +154,6 @@ class WeatherView: UIView {
         layout.minimumLineSpacing = 9
         layout.itemSize = CGSize(width: dynamicW(70), height: dynamicH(93))
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.register(WeatherCustomCollectionViewCell.self, forCellWithReuseIdentifier: "weatherCell")
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -213,12 +200,17 @@ class WeatherView: UIView {
             return textField
     }()
     
+    lazy var searchCityButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        button.tintColor = .black
+        return button
+    }()
+    
     lazy var mainView = UIView()
     
     lazy var tableView:UITableView = {
         let  tableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.layer.backgroundColor = UIColor.clear.cgColor
         tableView.backgroundColor = .clear
@@ -260,6 +252,7 @@ class WeatherView: UIView {
         searchView.addSubview(closeButton)
         searchView.addSubview(searchFieldView)
         searchFieldView.addSubview(searchTextField)
+        searchFieldView.addSubview(searchCityButton)
         searchView.addSubview(tableView)
         
         mainView.snp.makeConstraints { make in
@@ -298,12 +291,12 @@ class WeatherView: UIView {
         weatherImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(15)
             make.centerX.equalToSuperview()
-            make.height.equalTo(75)
-            make.width.equalTo(75)
+            make.height.equalTo(90)//75
+            make.width.equalTo(90)//75
         }
         
         tempretureText.snp.makeConstraints { make in
-            make.top.equalTo(weatherImage.snp.bottom).offset(-10)
+            make.top.equalTo(weatherImage.snp.bottom).offset(-20)
             make.centerX.equalToSuperview()
         }
         
@@ -398,17 +391,24 @@ class WeatherView: UIView {
             make.height.equalTo(44)
         }
         
-        searchTextField.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(19)
-            make.trailing.equalToSuperview().offset(-19)
-        }
-        
         tableView.snp.makeConstraints { make in
             make.top.equalTo(searchTextField.snp.bottom).offset(30)
             make.leading.equalToSuperview().offset(63)
             make.trailing.equalToSuperview().offset(-63)
             make.bottom.equalToSuperview()
+        }
+        
+        searchCityButton.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-10)
+            make.height.equalTo(24)
+            make.width.equalTo(24)
+        }
+        
+        searchTextField.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().offset(19)
+            make.trailing.equalTo(searchCityButton).offset(-5)
         }
         
         searchView.isHidden = true
@@ -424,30 +424,5 @@ class WeatherView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension WeatherView: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return weekWeather.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weatherCell", for: indexPath) as! WeatherCustomCollectionViewCell
-        let temp = weekWeather[indexPath.row]
-        cell.configureData(weekDay: temp.weekDay, image: temp.image, temp: temp.temp)
-        return cell
-    }
-}
-
-extension WeatherView: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherTableViewCell", for: indexPath) as! WeatherCustomTableViewCell
-        cell.configureData(cityName: cities[indexPath.row])
-        return cell
     }
 }

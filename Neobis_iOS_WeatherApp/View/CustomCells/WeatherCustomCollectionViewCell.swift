@@ -64,6 +64,8 @@ class WeatherCustomCollectionViewCell: UICollectionViewCell {
         weatherImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(13)
+            make.height.equalTo(26)
+            make.width.equalTo(26)
         }
         
         temperatureLabel.snp.makeConstraints { make in
